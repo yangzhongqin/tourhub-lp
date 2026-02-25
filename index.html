@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourhub - Smart Financial Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-orange: #FF6B35;
+            --primary-orange-light: #FF8E53;
+            --primary-orange-dark: #E55A2B;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+        }
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #fafafa;
+        }
+
+        .glass-effect {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-orange-light);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-orange);
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex items-center justify-between glass-effect rounded-2xl px-6 py-3 shadow-lg">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-900">Tourhub<span class="text-orange-500">.</span></h1>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="font-medium text-gray-700 hover:text-orange-500 transition-colors">Home</a>
+                    <a href="#" class="font-medium text-gray-700 hover:text-orange-500 transition-colors">Services</a>
+                    <a href="#" class="font-medium text-gray-700 hover:text-orange-500 transition-colors">Case
+                        Studies</a>
+                    <a href="#" class="font-medium text-gray-700 hover:text-orange-500 transition-colors">About Us</a>
+                    <button
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2.5 rounded-xl transition-all shadow-md hover:shadow-lg">
+                        Free Consultation
+                    </button>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden glass-effect mt-2 mx-4 rounded-2xl shadow-xl hidden">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#" class="font-medium text-gray-700 hover:text-orange-500 transition-colors py-2">Home</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-orange-500 transition-colors py-2">Services</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-orange-500 transition-colors py-2">Case
+                    Studies</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-orange-500 transition-colors py-2">About Us</a>
+                <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition-all shadow-md hover:shadow-lg mt-2">
+                    Free Consultation
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-24 pb-16 md:pt-32 md:pb-24 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                        Smart Financial Solutions
+                        <span class="text-orange-500 block">Keep Your Wealth Growing</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg">
+                        Tourhub provides you with professional fintech services, helping you achieve steady wealth
+                        growth through data-driven investment strategies and personalized financial planning.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <button
+                            class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl text-lg">
+                            Open Account Now
+                        </button>
+                        <button
+                            class="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 font-semibold px-8 py-4 rounded-xl transition-all text-lg">
+                            Learn More
+                        </button>
+                    </div>
+                    <div class="mt-10 flex items-center space-x-8">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-shield-alt text-orange-500"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Secure & Reliable</p>
+                                <p class="text-sm text-gray-500">Bank-grade Encryption</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-line text-orange-500"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Smart Analysis</p>
+                                <p class="text-sm text-gray-500">Data-driven Decisions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <div class="glass-effect rounded-3xl p-6 shadow-2xl">
+                            <div
+                                class="bg-gradient-to-r from-orange-100 to-yellow-100 rounded-2xl p-4 h-64 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="flex justify-center mb-6">
+                                        <div
+                                            class="w-16 h-16 rounded-full bg-orange-500 flex items-center justify-center">
+                                            <i class="fas fa-chart-pie text-white text-2xl"></i>
+                                        </div>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Live Investment Dashboard</h3>
+                                    <p class="text-gray-600">Visualize your asset allocation and performance</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-4 mt-6">
+                                <div class="bg-white rounded-xl p-4 text-center shadow">
+                                    <p class="text-2xl font-bold text-orange-500">+12.5%</p>
+                                    <p class="text-sm text-gray-600">Avg. Annual Return</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 text-center shadow">
+                                    <p class="text-2xl font-bold text-orange-500">24/7</p>
+                                    <p class="text-sm text-gray-600">Live Monitoring</p>
+                                </div>
+                                <div class="bg-white rounded-xl p-4 text-center shadow">
+                                    <p class="text-2xl font-bold text-orange-500">99.9%</p>
+                                    <p class="text-sm text-gray-600">System Uptime</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="absolute -top-4 -right-4 w-24 h-24 rounded-full bg-orange-200 opacity-30 -z-10">
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-yellow-200 opacity-30 -z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Core Financial Services</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Tourhub provides comprehensive fintech solutions to
+                    help you achieve intelligent wealth management.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Robo-Advisory</h3>
+                    <p class="text-gray-600 mb-6">Personalized portfolio recommendations based on AI algorithms,
+                        dynamically adjusting strategies according to your risk appetite and market changes.</p>
+                    <a href="#" class="text-orange-500 font-semibold flex items-center">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-bar text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Wealth Planning</h3>
+                    <p class="text-gray-600 mb-6">Comprehensive financial health assessment and long-term wealth
+                        planning to help you set and achieve your financial goals.</p>
+                    <a href="#" class="text-orange-500 font-semibold flex items-center">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Risk Management</h3>
+                    <p class="text-gray-600 mb-6">Multi-level risk control system, monitoring market volatility in
+                        real-time to protect your asset security.</p>
+                    <a href="#" class="text-orange-500 font-semibold flex items-center">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg md:col-span-2 lg:col-span-1">
+                    <div class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Global Asset Allocation</h3>
+                    <p class="text-gray-600 mb-6">Diversified global investment opportunities to disperse risk and
+                        capture growth potential in different markets.</p>
+                    <a href="#" class="text-orange-500 font-semibold flex items-center">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven by Data</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Tourhub has helped thousands of clients achieve their
+                    wealth growth goals.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                <div class="stat-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-2">50K+</p>
+                    <p class="text-gray-700 font-medium">Clients Served</p>
+                </div>
+
+                <div class="stat-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-2">$2.5B+</p>
+                    <p class="text-gray-700 font-medium">Assets Managed</p>
+                </div>
+
+                <div class="stat-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-2">98%</p>
+                    <p class="text-gray-700 font-medium">Client Satisfaction</p>
+                </div>
+
+                <div class="stat-card bg-white rounded-2xl p-6 text-center shadow-lg">
+                    <p class="text-4xl md:text-5xl font-bold text-orange-500 mb-2">24/7</p>
+                    <p class="text-gray-700 font-medium">Customer Support</p>
+                </div>
+            </div>
+
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Client Testimonials</h3>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Hear what our clients have to say</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-orange-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Mr. Zhang</h4>
+                            <p class="text-gray-600 text-sm">Tech Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Tourhub's smart advisory service helped my portfolio achieve a 15%
+                        return over the past year, far exceeding my expectations."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
